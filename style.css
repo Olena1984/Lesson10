@@ -1,0 +1,133 @@
+*, *::before, *::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.container {
+    display:flex;
+    width: 1500px;
+    height: 1000px;
+    margin:50px;
+    background-color:rgb(205, 233, 224);
+    justify-content: center;
+    align-items: center;
+    position:relative;
+ 
+}
+.sword {
+    width: 500px;
+    height: 60px;
+   
+    position: absolute;
+    top: 200px;
+    
+    
+}
+.sword-1, .sword-2{
+    display: flex;
+    width: 500px;
+    height: 30px;
+    border: 1px solid rgb(141, 72, 126);
+    border-radius: 30px;
+    background-color:yellow;
+    margin-bottom: 3px;
+    position: absolute;
+    /*transition: transform 1s;*/
+    
+}
+.sword-1{
+    animation: rotate 2s 0.5s ease-in-out infinite alternate;
+}
+.sword-2{
+    background-color:orange;
+    animation: rotate1 2s 0.5s ease-in-out infinite alternate;
+}
+/*.sword-1:hover, .sword-2:hover {
+    transform: rotate(30deg);
+    transform: rotate(-30deg);
+}*/
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+        background-color:yellow;
+    }
+    to{
+        transform: rotate(20deg);
+        transform:rotate(-20deg);
+        background-color:yellowgreen;
+    }
+
+}
+@keyframes rotate1{
+    from{
+        transform: rotate(0deg);
+        background-color:orange;
+    }
+    to{
+        transform: rotate(-20deg);
+        transform:rotate(20deg);
+        background-color:orangered;
+    }
+} 
+.circle{
+    display:flex;
+    width: 300px;
+    height:50px;
+    
+}
+.one, .two, .three,
+.four, .five, .six,
+.seven {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(173, 36, 173);
+    border-radius:50%;
+    background:rgb(221, 26, 221);
+
+}
+ .one {
+    position: relative;
+    animation: moving 1.5s 1s ease-in-out infinite alternate;  
+}
+@keyframes moving{
+    from{
+        top: -40px;
+        left: -50px;
+        background:rgb(221, 26, 221);
+    }
+    to{
+        top:0px;
+        left:0px;
+        background:rgb(187, 22, 187);
+    }
+}
+.seven{
+    position: relative;
+    animation: moving1 1.5s 1s ease-in-out infinite alternate;
+}
+@keyframes moving1{
+    from{
+        top:0px;
+        right:0px;
+        background:rgb(187, 22, 187);
+    }
+    to{
+        top:-40px;
+        right:-50px;
+        background:rgb(221, 26, 221);
+    }
+}
+.two, .three,
+.four, .five, .six{
+    animation: moving2 2s 1s ease-in-out infinite alternate-reverse;
+}
+@keyframes moving2{
+    from{
+        background:rgb(221, 26, 221);
+        
+    }
+    to{
+        background:rgb(187, 22, 187); 
+        
+    }
+}
